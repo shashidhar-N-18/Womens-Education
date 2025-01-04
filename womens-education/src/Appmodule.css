@@ -1,0 +1,194 @@
+/* Import the Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
+/* Universal Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #e1989f;
+    color: #e1989f;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000000" stroke-width="1.75" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>') 0 0, auto;
+}
+
+button, a, input, select, textarea {
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000000" stroke-width="1.75" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>') 0 0, auto;
+}
+
+img { 
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3, p {
+    margin: 21px;
+}
+
+/* Layout Styles */
+section {
+    padding: 7rem 0;
+}
+
+.container {
+    width: 85%;
+    max-width: 65rem;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.split > * {
+    flex: 1 1 calc(33.33% - 2rem); 
+    min-width: 200px;
+    padding: 4rem;
+    background-color: #ffe4e1;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.split > *:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.split > .knowledge-center:hover {
+    background-color: #e1989f;
+}
+
+.split > .knowledge-center:hover h2 {
+    color: #e1989f;
+}
+
+.split > .help-support {
+    background-color: #ffe4e1;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 1rem 0;
+    background: url('backgnd.jpg') no-repeat center center/cover;
+    color: #e1989f;
+}
+
+.hero::before { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 52, 66, 0.7);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.primary-title {
+    font-size: 4rem;
+    font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+    text-transform: uppercase;
+    color: #e1989f;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #e1989f;
+    margin-bottom: 5rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    background-color: #ff1493;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.25rem;
+    transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+/* Home Page Styles */
+.home-page .help-support {
+    transition: background-color 0.3s ease-in-out, opacity 250ms;
+}
+
+.home-page .help-support:hover {
+    background-color: #ffe4e1;
+    color: #b45e47;
+}
+
+.home-page .help-support .btn:hover {
+    background-color: #b45e47;
+    color: #ffe4e1;
+}
+
+.home-page .knowledge-center {
+    transition: background-color 0.3s ease-in-out, opacity 250ms;
+}
+
+.home-page .knowledge-center:hover h2 {
+    color: #ffe4e1;
+}
+
+/* Knowledge Center Page Styles */
+.knowledge-center-page .knowledge-center {
+    background-color: transparent;
+}
+
+.knowledge-center-page .knowledge-center:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+.knowledge-center-page {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Help and Support Page */
+.help-support-page {
+    text-align: center;
+}
+
+.help-support-page .btn {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .split > * {
+        flex: 1 1 calc(50% - 1rem); /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .split > * {
+        flex: 1 1 100%; /* Stack cards vertically */
+    }
+}

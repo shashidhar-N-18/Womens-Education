@@ -1,0 +1,82 @@
+import React, { useState, useEffect } from 'react';
+
+import "./knowledge_center.css";
+import LatestNews from "./latest_news";
+import Blogs from "./blogs_news";
+// import Categories from "./categories_videos";
+
+
+// import LatestNews from './latest_news.jsx'
+
+const KnowledgeCenter = () => {
+
+    const [currentPage, setCurrentPage] = useState('home'); // Default page is 'home'
+  
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on mount
+  }, []);
+
+  return (
+    <div className="knowledge-center">
+      <header className="header">
+        <h1>Knowledge Center</h1>
+        <p>Discover knowledge and resources to empower your learning!</p>
+      </header>
+      <main className="main-content">
+        <section className="section">
+          <h2>Learn Skills Through Videos</h2>
+          <div className="btn-container">
+            <p>Enhance your skills with engaging and helpful video tutorials.</p>
+            <button onClick={() => handlePageChange('container-videos')} className="btn"> 
+                    Go to Videos
+                </button>
+          </div>
+
+        </section>
+        <section className="section">
+          <h2>See Latest News</h2>
+          <p>Stay informed with the latest news about education and skills.</p>
+          <div className="btn-container">
+            <button onClick={() => handlePageChange('latest-news')} className="btn">
+              See News
+            </button>
+          </div>
+
+        </section>
+        <section className="section">
+          <h2>Blogs</h2>
+          <div className="btn-container">
+            <p>Dive into articles and blogs for deeper insights and knowledge.</p>
+            <button onClick={() => handlePageChange('blogs-')} className="btn">
+            Explore Blogs
+            </button>
+          </div>
+
+        </section>
+      </main>
+  
+             {currentPage === 'latest-news' && (
+               <div className="latest-news-page">
+                 <LatestNews />
+                 {/* Button to go back to home */}
+                 <button onClick={() => handlePageChange('home')} className="btn">
+                   Back to Home
+                 </button>
+               </div>
+             )}
+       
+
+             {currentPage === 'blogs-pg' && (
+               <div className="blogs-page">
+                       <Blogs />
+                 <button onClick={() => handlePageChange('home')} className="btn">
+                   Back to Home
+                 </button>
+               </div>
+             )}
+      
+    </div>
+  );
+};
+
+export default KnowledgeCenter; 

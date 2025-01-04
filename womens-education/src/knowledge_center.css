@@ -1,0 +1,126 @@
+/* General Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000000" stroke-width="1.75" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>') 0 0, auto;
+}
+
+button, a, input, select, textarea {
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000000" stroke-width="1.75" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>') 0 0, auto;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #e1989f, #ff69b4);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff0f5;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* Main Content */
+.main-content {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Cards (Sections) */
+.section {
+    flex: 1;
+    max-width: calc(33.33% - 1rem); /* For three cards in a row */
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    color: #ff1493;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    background-color: #ff69b4;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.25rem;
+    transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.btn:hover {
+    background: #ff1493;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-row {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        gap: 2rem;
+    }
+
+    .section {
+        max-width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #fff0f5;
+    color: #555;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+    

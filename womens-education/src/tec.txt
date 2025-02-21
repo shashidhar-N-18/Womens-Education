@@ -1,6 +1,0 @@
-driver_path = "C:/Users/Asus/WEB_TEK college/chromedriver-win64/chromedriver-win64/chromedriver.exe"  # Path to ChromeDriver
-chrome_binary_path = "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"  # Path to Chrome Binary
-base_url = "http://localhost:5173/" 
-
- <div className="button-group">
-        <button id="english-course-btn" className="btn">English Course in Kannada</button>
